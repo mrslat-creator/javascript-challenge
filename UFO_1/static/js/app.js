@@ -1,7 +1,30 @@
 //References to the tbodyelemet, input fields and button
 var $tbody = document.querySelector("tbody");
-var $dateInput =
+var $dateInput = document.querySelector("#datetime");
+var $searchBtn = document.querySelector("#search");
+var $resetBtn = document.querySelector("#reset");
+
+//Add an event listener to the search button, call handleSearchButtonClick when clicked
+$searchBtn.addEventListener("click", handleSearchButtonClick);
+
+//Add an event listener to the restButton, call handleResetButtonClick when clicked
+$resetBtn.addEventListener("click", handleResetButtonClick);
+
 // from data.js
 var tableData = data;
 
-// YOUR CODE HERE!
+// Build table with non-filtered data
+function renderTable() {
+    $tbody.innerHTML = "";
+    for (var i =0; i < tableData.length; i++) {
+        //Get current address object and fields
+        var address = tableData[i];
+        console.log(address)
+        var fields = object.keys(address);
+        //Create new row in tbody, set index to be i + startingIndex
+        var $row = $tbody.insertRow(i);
+        for (var j = 0; j < fields.length; j++) {
+            
+        }
+    }
+}
