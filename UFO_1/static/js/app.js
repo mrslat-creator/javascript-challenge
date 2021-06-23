@@ -41,6 +41,16 @@ function handleSearchButtonClick() {
         tableData = data.filter(function (address) {
           var addressDate =address.datetime;
           return addressDate === filterDate;
-        })
+        });
     }
+    else { tableData };
+
+    renderTable();
 }
+
+//Clear all the fields
+function handleResetButtonClick(){
+    renderTable();
+}
+// Render the table for the first time on page load
+renderTable();
