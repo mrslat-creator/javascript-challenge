@@ -49,7 +49,7 @@ function handleSearchButtonClick() {
 }
 
 //Clear all the fields
-function handleResetButtonClick(){
+function handleResetButtonClick() {
     renderTable();
 }
 // Render the table for the first time on page load
