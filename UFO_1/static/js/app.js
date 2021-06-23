@@ -19,7 +19,7 @@ function renderTable() {
     for (var i =0; i < tableData.length; i++) {
         //Get current address object and fields
         var address = tableData[i];
-        console.log(address)
+        console.log(address);
         var fields = object.keys(address);
         //Create new row in tbody, set index to be i + startingIndex
         var $row = $tbody.insertRow(i);
@@ -39,11 +39,11 @@ function handleSearchButtonClick() {
     //Filter on date
     if (filterDate != "") {
         tableData = data.filter(function (address) {
-          var addressDate =address.datetime;
+          var addressDate = address.datetime;
           return addressDate === filterDate;
         });
     }
-    else { tableData };
+    else {tableData}
 
     renderTable();
 }
