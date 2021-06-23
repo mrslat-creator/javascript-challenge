@@ -24,7 +24,23 @@ function renderTable() {
         //Create new row in tbody, set index to be i + startingIndex
         var $row = $tbody.insertRow(i);
         for (var j = 0; j < fields.length; j++) {
-            
+            //For each field in address object, create new cell and set inner text to be current value at current address field
+            var field = fields[j];
+            var $cell = $row.insertCell(j);
+            $cell.innerText = address[field];
         }
+    }
+}
+
+// Build search table for filtered data
+function handleSearchButtonClick() {
+    var filterDate = $dateInput.nodeValue;
+
+    //Filter on date
+    if (filterDate != "") {
+        tableData = data.filter(function (address) {
+          var addressDate =address.datetime;
+          return addressDate === filterDate;
+        })
     }
 }
