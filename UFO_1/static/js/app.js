@@ -43,7 +43,7 @@ function handleSearchButtonClick() {
           return addressDate === filterDate;
         });
     }
-    else {tableData}
+    else { tableData }
 
     renderTable();
 }
